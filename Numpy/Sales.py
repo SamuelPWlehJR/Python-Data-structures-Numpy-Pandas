@@ -20,23 +20,6 @@ import numpy as np
 # sales_mean = np.mean(sales, axis=0)
 # print(sales, axis=0)
 
-# np.random.seed(0)
-# array1 = np.random.randint(10, size=4)
-# print("arrary1: ", array1)
-
-# array2 = np.random.randint(10, size=(2, 4))
-# print("array2: ", array2)
-
-# array3 = np.random.randint(10, size=(3, 4, 5))
-# print("array3: ", array3)
-
-# print("numpy array attributes example:")
-# print("array3 ndim: ", array3.ndim)
-# print("array3 shape: ", array3.shape)
-# print("array3 size: ", array3.size)
-# print("array3 dtype: ", array3.dtype)
-# print("array3 itemsize: ", array3.itemsize, "bytes")
-# print("array3 nbytes: ", array3.nbytes, "bytes")
 
 # mark = np.array([
 #   [75, 80, 65, 70],
@@ -106,3 +89,19 @@ print("Hightest total weekly sales: ", highest_total_weekly_sales)
 # on which day were total sales the highest?
 day_highest_sales = np.max(sales, axis = 0)
 print("Day with highest sales: ", day_highest_sales)
+
+# Array Indexing - one -dimensional array
+
+x = np.arange(10)
+print("x: ",x[0])
+x1 = np.array([5, 0, 3, 3, 7, 9])
+print("x1: ", x1[0])
+
+# Array Indexing - multi-dimensional array
+x2 = np.array([[3, 5, 2, 4], # Row 0
+               [7, 6, 8, 8], # Row 1
+               [1, 6, 7, 7]]) # Row 2
+print("Accessing the last element: ", x2[2, -1]) # Accessing the last element
+print("Accessing the element in the first row and fourth column: ", x2[0, 3]) # Accessing the element in the first row and fourth column
+x2[0,0]= 12 # Modifying the element in the first row and first column
+print("Modified element in the first row and first column: ", x2)
