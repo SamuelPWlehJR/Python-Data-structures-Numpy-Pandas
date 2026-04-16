@@ -105,3 +105,28 @@ print("Accessing the last element: ", x2[2, -1]) # Accessing the last element
 print("Accessing the element in the first row and fourth column: ", x2[0, 3]) # Accessing the element in the first row and fourth column
 x2[0,0]= 12 # Modifying the element in the first row and first column
 print("Modified element in the first row and first column: ", x2)
+
+# array slicing: Acessing subarrays - one dimensional array
+print("Accessing the first column: ", x2[:, 0])
+print("first row of x2: ", x2[0, :])
+print("equivalent to x2[0]: ", x2[0])
+
+# Let's extract a 2x2 subarray from this
+x2_sub = x2[:2, :2]
+print("2x2 subarray: ", x2_sub)
+
+# Modifying this subarray
+x2_sub[0, 0] = 99
+print("modified subarray: ", x2_sub)
+print("Original array after modifying the subarray: ", x2)
+
+# Array Slicing: Accessing subarrays - multi - dimensional array
+x3 = np.array([[12, 5, 2, 4], # Row 0
+               [7, 6, 9, 9], # Row 1
+               [1, 6, 5, 5 ]]) # Row 2
+x3[:2, :3] # two rows and three columns
+print("Two rows and three columns: ", x3[:2, :3])
+x3[:3, ::2] # all rows, and every other column
+print("All rows, and every other column: ", x3[:3, ::2])
+x3[::-1, ::-1] # all rows and columns in reverse together
+print(" All rows and columns in reverse together: ", x3[::-1, ::-1])
